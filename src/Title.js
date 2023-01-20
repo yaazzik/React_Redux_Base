@@ -3,6 +3,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {inputText} from "./redux/actions";
 
 const Title = (props) => {
+  const dispatch = useDispatch();
   console.log("title props -> ", props)
 
   const titleText = useSelector(state => {
@@ -16,7 +17,6 @@ const Title = (props) => {
     dispatch(inputText(e.target.value))
   }
 
-  const dispatch = useDispatch();
 
   return (
     <div className='card-title'>
